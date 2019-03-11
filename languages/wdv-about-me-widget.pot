@@ -1,0 +1,72 @@
+# Copyright (C) 2019 WDV About Me Widget
+# This file is distributed under the same license as the WDV About Me Widget package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WDV About Me Widget 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wdv-about-me-widget\n"
+"POT-Creation-Date: 2019-03-09 18:18:40+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: inc/class-wdv-about-me-widget.php:20
+msgid "Add About Me widget"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:22
+msgid "WDV: About Me widget"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:68
+msgid "Title"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:75
+msgid "Image"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:81
+msgid "No image selected"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:87
+msgid "Remove Image"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:88
+msgid "Select Image"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:96
+msgid "Alternative text for image"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:101
+msgid "Name"
+msgstr ""
+
+#: inc/class-wdv-about-me-widget.php:106
+msgid "Profession"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "WDV About Me Widget"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wdvillage.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adding About Me widget."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "wdvillage"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://wdvillage.com"
+msgstr ""
