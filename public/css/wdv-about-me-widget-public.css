@@ -57,3 +57,6 @@
 .wdv-container .wdv-header {
     text-align: center;
 }
+.wdv-container i:before {
+    content:'';
+}
