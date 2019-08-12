@@ -57,3 +57,10 @@
 .wdv-container .wdv-header {
     text-align: center;
 }
+.wdv_about_me_widget_wdv_widget .wdv-icon-container a i {
+    background:#eee;
+}
+
+.wdv_about_me_widget_wdv_widget .wdv-icon-container a i {
+    color:#333;
+}
