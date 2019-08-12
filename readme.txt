@@ -9,11 +9,11 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add 'WDV About Me' widget to your theme.
+Add 'WDV About Me Widget' widget to your theme.
 
 == Description ==
 
-With this plugin you can add 'WDV About Me' widget to your theme. You can add you data or your firm data. You can add image, description, link, contact information, social links.
+With this plugin you can add 'WDV About Me Widget' widget to your theme. You can add you data or your firm data. You can add image, description, link, contact information, social links.
 
 == Installation ==
 
