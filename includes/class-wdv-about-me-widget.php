@@ -162,11 +162,6 @@ class Wdv_About_Me_Widget {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
   
-                
-                
-                
-   // Add menu item
-   $this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu' );
 
     //Widgets
     $this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );   

@@ -117,34 +117,6 @@ class Wdv_About_Me_Widget_Admin {
 	public function register_widgets() {
 		 register_widget( 'Wdv_About_Me_Widget_Wdv_Widget' );
 	}        
-        
-    
-        
-    /**
-     * Register the administration menu for this plugin into the WordPress Dashboard menu.
-     */
-
-    public function add_plugin_admin_menu() {
-
-     /*
-      * Add a settings page for this plugin to the Settings menu.
-     */
-        add_options_page( 'WDV About Me Widget and Base Options Functions Setup', 'WDV About Me Widget', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
-        );
-    }
-
-     /**
-     * Add settings action link to the plugins page.
-     */
-
-    public function add_action_links( $links ) {
-        
-       $settings_link = array(
-        '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', $this->plugin_name) . '</a>',
-       );
-       return array_merge(  $settings_link, $links );
-
-    }
 
     /**
      * Render the settings page for this plugin.
@@ -154,21 +126,5 @@ class Wdv_About_Me_Widget_Admin {
         
         include_once( 'partials/wdv-about-me-widget-admin-display.php' );
         
-    }  
-    
-/**
-   * Validate options
-   */
-   public function validate($input) {
-     $valid = array();
-     $valid['footer_text'] = (isset($input['footer_text']) && !empty($input['footer_text'])) ? $input['footer_text'] : '';
-     return $valid;
-   }
-   
-     /**
-     * Update all options
-     */
-    public function options_update() {
-        register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
     }  
 }
