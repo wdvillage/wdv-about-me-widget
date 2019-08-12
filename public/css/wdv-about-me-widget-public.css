@@ -1,0 +1,59 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.wdv-container {
+    overflow: hidden;  
+}
+.wdv-icon-container {
+    text-align: center;
+    margin-top: 10px;
+}
+.wdv_about_me_widget_wdv_widget .wdv-icon-container a i {
+    margin:5px;
+}
+.wdv_about_me_widget_wdv_widget .wdv-icon-container a {
+    outline: none;
+}
+.wdv_about_me_widget_wdv_widget .wdv-header a {
+    text-align: right;
+}
+.wdv_about_me_widget_wdv_widget a,
+.wdv_about_me_widget_wdv_widget .wdv-header a .about-link {
+    text-decoration: underline;
+}
+.wdv-header a {
+    margin-top: 10px;
+}
+.wdv-container .about-description {
+    text-align: left;
+}
+.wdv-about-name {
+    font-weight: bold;
+}
+.wdv-about-profession {
+    font-style: italic;
+}
+.wdv-image {
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.wdv-container .contact-info i {
+    margin: 5px;
+    margin-right: 15px;
+}
+.contact-text {
+    font-weight: bold;
+    font-size: 1em;
+}
+.wdv-container .contact-container {
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 10px;
+}
+
+.wdv-container .wdv-header {
+    text-align: center;
+}
