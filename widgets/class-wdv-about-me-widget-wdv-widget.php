@@ -510,7 +510,13 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             <div class="wdv-media-container" >
 
                 <div class="wdv-media-inner">
-                    <?php $img_style = ( $instance['image'] != '' ) ? '' : 'style="display:none; float: left"'; ?>
+                    <?php $img_style = ( $instance['image'] != '' ) ? '' : 'style="display:none; float: left"'; 
+                    if ($instance['image']) {?>
+                    <style>
+                        .wdv-media-inner .no-image {display: none;}
+                    </style>                        
+                    <?php } ?>
+                    
                     <img id="<?php echo esc_attr($this->get_field_id('image')); ?>-preview" src="<?php echo esc_url($instance['image']); ?>" <?php echo esc_attr($img_style); ?> <?php $no_img_style = esc_attr(( $instance['image'] != '' ) ? 'style="display:none"' : ''); ?> /><br>        
                     <span class="no-image" id="<?php echo esc_attr($this->get_field_id('image')); ?>-noimg" <?php echo esc_attr($no_img_style); ?>><?php esc_html_e('No image selected', 'wdv-about-me-widget'); ?></span><br><br>
                     <div class="wdv-empty"></div>
