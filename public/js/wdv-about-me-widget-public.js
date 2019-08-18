@@ -28,6 +28,16 @@
 	 * Although scripts in the WordPress core, Plugins and Themes may be
 	 * practising this, we should strive to set a better example in our own work.
 	 */
-        
+      	$( document ).ready( function() {
+                $( '.widget_wdv_about_me_widget #icon-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+                $( '.widget_wdv_about_me_widget #icon-bg-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+		$( '.widget_wdv_about_me_widget #icon-hover-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+	} );     
 
 })( jQuery );

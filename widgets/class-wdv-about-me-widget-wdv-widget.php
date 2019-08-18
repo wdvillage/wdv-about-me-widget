@@ -36,294 +36,252 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         array(
             'icon' => 'Behance',
             'icon-name' => 'behance',
-            'url' => '',
             'icon-i' => '<i class="fab fa-behance"></i>',
             'icon-code' => 'f1b4',
         ),        
         array(
             'icon' => 'Blogger',
-            'icon-name' => 'blogger',
-            'url' => '',
-            'icon-i' => '<i class="fab fa-blogger"></i>',
-            'icon-code' => 'f37c',
+            'icon-name' => 'blogger-b',
+            'icon-i' => '<i class="fab fa-blogger-b"></i>',
+            'icon-code' => 'f37d',
         ),        
         array(
             'icon' => 'Codepen',
             'icon-name' => 'codepen',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-codepen"></i>',
             'icon-code' => 'f1cb',
         ),               
         array(
             'icon' => 'Deviantart',
             'icon-name' => 'deviantart',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-deviantart"></i>',
             'icon-code' => 'f1bd',
         ),                   
         array(
             'icon' => 'Dribbble',
             'icon-name' => 'dribbble',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-dribbble"></i>',
             'icon-code' => 'f17d',
         ),                           
         array(
             'icon' => 'Facebook',
             'icon-name' => 'facebook-f',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-facebook-f"></i>',
             'icon-code' => 'f39e',
         ),        
         array(
             'icon' => 'Flickr',
             'icon-name' => 'flickr',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-flickr"></i>',
             'icon-code' => 'f16e',
         ),                
         array(
             'icon' => 'Foursquare',
             'icon-name' => 'foursquare',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-foursquare"></i>',
             'icon-code' => 'f180',
         ),                 
         array(
             'icon' => 'Github',
             'icon-name' => 'github',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-github"></i>',
             'icon-code' => 'f09b',
         ),                   
         array(
             'icon' => 'Gitlab',
             'icon-name' => 'gitlab',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-gitlab"></i>',
             'icon-code' => 'f296',
         ), 
         array(
             'icon' => 'Instagram',
             'icon-name' => 'instagram',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-instagram"></i>',
             'icon-code' => 'f16d',
         ), 
         array(
             'icon' => 'Linkedin',
             'icon-name' => 'linkedin-in',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-linkedin-in"></i>',
             'icon-code' => 'f0e1',
         ),        
         array(
             'icon' => 'Medium',
             'icon-name' => 'medium-m',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-medium-m"></i>',
             'icon-code' => 'f3c7',
         ),         
         array(
             'icon' => 'Meetup',
             'icon-name' => 'meetup',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-meetup"></i>',
             'icon-code' => 'f2e0',
         ),   
         array(
             'icon' => 'Odnoklassniki',
             'icon-name' => 'odnoklassniki',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-odnoklassniki"></i>',
             'icon-code' => 'f263',
         ),        
         array(
             'icon' => 'Periscope',
             'icon-name' => 'periscope',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-periscope"></i>',
             'icon-code' => 'f3da',
         ),         
         array(
             'icon' => 'Pinterest',
             'icon-name' => 'pinterest-p',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-pinterest-p"></i>',
             'icon-code' => 'f231',
         ),        
         array(
             'icon' => 'Pocket',
             'icon-name' => 'get-pocket',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-get-pocket"></i>',
             'icon-code' => 'f265',
         ),        
         array(
             'icon' => 'Qq',
             'icon-name' => 'qq',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-qq"></i>',
             'icon-code' => 'f1d6',
         ),  
         array(
             'icon' => 'Reddit',
             'icon-name' => 'reddit-alien',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-reddit-alien"></i>',
             'icon-code' => 'f281',
         ),       
         array(
             'icon' => 'Stumbleupon',
             'icon-name' => 'stumbleupon',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-stumbleupon"></i>',
             'icon-code' => 'f1a4',
         ),              
         array(
             'icon' => 'Slack',
             'icon-name' => 'slack',            
-            'url' => '',
             'icon-i' => '<i class="fab fa-slack"></i>',
             'icon-code' => 'f198',
         ),              
         array(
             'icon' => 'Snapchat',
             'icon-name' => 'snapchat-ghost',
-            'url' => '',
             'icon-i' => '<i class="fab fa-snapchat-ghost"></i>',
             'icon-code' => 'f2ac',
         ),              
         array(
             'icon' => 'Soundcloud',
             'icon-name' => 'soundcloud',
-            'url' => '',
             'icon-i' => '<i class="fab fa-soundcloud"></i>',
             'icon-code' => 'f1be',
         ),                         
         array(
             'icon' => 'Spotify',
             'icon-name' => 'spotify',
-            'url' => '',
             'icon-i' => '<i class="fab fa-spotify"></i>',
             'icon-code' => 'f1bc',
         ),                         
         array(
             'icon' => 'Stackoverflow',
             'icon-name' => 'stack-overflow',
-            'url' => '',
             'icon-i' => '<i class="fab fa-stack-overflow"></i>',
             'icon-code' => 'f16c',
         ),                       
         array(
             'icon' => 'Telegram',
             'icon-name' => 'telegram-plane',
-            'url' => '',
             'icon-i' => '<i class="fab fa-telegram-plane"></i>',
             'icon-code' => 'f3fe',
         ),                     
         array(
             'icon' => 'Tripadvisor',
             'icon-name' => 'tripadvisor',
-            'url' => '',
             'icon-i' => '<i class="fab fa-tripadvisor"></i>',
             'icon-code' => 'f262',
         ),                      
         array(
             'icon' => 'Tumblr',
             'icon-name' => 'tumblr',
-            'url' => '',
             'icon-i' => '<i class="fab fa-tumblr"></i>',
             'icon-code' => 'f173',
         ),                
         array(
             'icon' => 'Twitch',
             'icon-name' => 'twitch',
-            'url' => '',
             'icon-i' => '<i class="fab fa-twitch"></i>',
             'icon-code' => 'f1e8',
         ),  
         array(
             'icon' => 'Twitter',
             'icon-name' => 'twitter',
-            'url' => '',
             'icon-i' => '<i class="fab fa-twitter"></i>',
             'icon-code' => 'f099',
         ),        
         array(
             'icon' => 'Viadeo',
             'icon-name' => 'viadeo',
-            'url' => '',
             'icon-i' => '<i class="fab fa-viadeo"></i>',
             'icon-code' => 'f2a9',
         ),              
         array(
             'icon' => 'Vimeo',
             'icon-name' => 'vimeo-v',
-            'url' => '',
             'icon-i' => '<i class="fab fa-vimeo-v"></i>',
             'icon-code' => 'f27d',
         ),                    
         array(
             'icon' => 'Vine',
             'icon-name' => 'vine',
-            'url' => '',
             'icon-i' => '<i class="fab fa-vine"></i>',
             'icon-code' => 'f1ca',
         ),         
         array(
             'icon' => 'Vk',
             'icon-name' => 'vk',
-            'url' => '',
             'icon-i' => '<i class="fab fa-vk"></i>',
             'icon-code' => 'f189',
         ),                
         array(
             'icon' => 'Weibo',
             'icon-name' => 'weibo',
-            'url' => '',
             'icon-i' => '<i class="fab fa-weibo"></i>',
             'icon-code' => 'f18a',
         ),                    
         array(
             'icon' => 'Wechat',
             'icon-name' => 'wechat',
-            'url' => '',
             'icon-i' => '<i class="fab fa-weixin"></i>',
             'icon-code' => 'f1d7',
         ),          
         array(
             'icon' => 'Wordpress',
             'icon-name' => 'wordpress-simple',
-            'url' => '',
             'icon-i' => '<i class="fab fa-wordpress-simple"></i>',
             'icon-code' => 'f411',
         ),               
         array(
             'icon' => 'Xing',
             'icon-name' => 'xing',
-            'url' => '',
             'icon-i' => '<i class="fab fa-xing"></i>',
             'icon-code' => 'f168',
         ),               
         array(
             'icon' => 'Yelp',
             'icon-name' => 'yelp',
-            'url' => '',
             'icon-i' => '<i class="fab fa-yelp"></i>',
             'icon-code' => 'f1e9',
         ),                        
         array(
             'icon' => 'Youtube',
             'icon-name' => 'youtube',
-            'url' => '',
             'icon-i' => '<i class="fab fa-youtube"></i>',
             'icon-code' => 'f167',
         ),                    
         array(
             'icon' => 'Yoast',
             'icon-name' => 'yoast',
-            'url' => '',
             'icon-i' => '<i class="fab fa-yoast"></i>',
             'icon-code' => 'f2b1',
         ),                    
@@ -356,9 +314,9 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             'icon-font-size' => 16,
             'icon-padding' => 8,
             'icon-border-radius' => 0,
-            'icon-color' => '',
-            'icon-bg-color' => '',
-            'icon-hover-color' => '',
+            'icon-color' => '#333',
+            'icon-bg-color' => '#eee',
+            'icon-hover-color' => '#ccc',
 
             'iconBehance' => '',
             'iconBlogger' => '',
@@ -414,15 +372,23 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $instance = wp_parse_args((array) $instance, $this->defaults);
 
         echo $args['before_widget'];
-       // echo '<div class="wdv-container" style="text-align:' . $instance['align'] . ';">';
+
         echo '<div class="wdv-container">';
         if (!empty($instance['title']))
             echo $args['before_title'] . apply_filters('widget_title', $instance['title'], $instance, $this->id_base) . $args['after_title'];
 
         if ($instance['align'] === 'center') {
-            $align = 'center;';
+            $align = 'center;'; ?>
+            <style>
+                .wdv-container .contact-container {padding-left: 2em; padding-right: 2em;}
+            </style>
+        <?php               
         } else {
-            $align = 'left;';
+            $align = 'left;'; ?>
+            <style>
+                .wdv-container .contact-container {padding-left: 0; padding-right: 0;}
+            </style>            
+            <?php
         }        
         
         if ($instance['text_new_tab'] === 'on') {
@@ -454,46 +420,40 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             echo '</p></div>';
         }
         
-        if( !empty($instance['contact-text'])||!empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
+        if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
             echo '<div class="contact-information">';
-        }
-        
-        if( $instance['contact-text'])  {
+                if( $instance['contact-text'])  {
 			echo '<div class="contact-text" style="text-align:' . $instance['align'] . ';">';
 			echo $instance['contact-text'];                            
 			echo '</div>';
-		}        
+		}              
+        }
+        
+ 
+    if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
+            echo '<div class="contact-container">';
+        }            
         if( $instance['contact-address'])  {
-                        echo '<div class="contact-container">';
-			echo '<div class="contact-address">';
-			echo '<div class="contact-info"><i class="fas fa-map-marker-alt"></i>' . $instance['contact-address'] . '</div>';                            
-			echo '</div>';
+			echo '<div class="contact-address"><i class="fas fa-map-marker-alt"></i>' . $instance['contact-address'] . '</div>';                            
 		}
 	if( $instance['contact-phone'] ) {
-			echo '<div class="contact-phone">';
-                        echo '<div class="contact-info"><i class="fas fa-phone-alt"></i>'. $instance['contact-phone'] .'</div>';
-			echo '</div>';
+                        echo '<div class="contact-phone"><i class="fas fa-phone-alt"></i>'. $instance['contact-phone'] .'</div>';
         }
 	if( $instance['contact-email'] ) {
-			echo '<div class="contact-email">';
-			echo '<div class="contact-info"><i class="far fa-envelope"></i>' . '<a href="mailto:' . $instance['contact-email'] . '">' . $instance['contact-email'] . '</a></div>';
-			echo '</div>'; 
+			echo '<div class="contact-email"><i class="far fa-envelope"></i>' . '<a href="mailto:' . $instance['contact-email'] . '">' . $instance['contact-email'] . '</a></div>';
 		}        
         if( $instance['contact-skype'] ) {
-			echo '<div class="contact-skype">';
-                        echo '<div class="contact-info"><i class="fab fa-skype"></i>'. $instance['contact-skype'] .'</div>';
-			echo '</div>';
+                        echo '<div class="contact-skype"><i class="fab fa-skype"></i>'. $instance['contact-skype'] .'</div>';
         }
 	if( $instance['contact-whatsapp'] ) {
-			echo '<div class="contact-whatsapp">';
-                        echo '<div class="contact-info"><i class="fab fa-whatsapp"></i>'. $instance['contact-whatsapp'] .'</div>';
-			echo '</div>';
+                        echo '<div class="contact-whatsapp"><i class="fab fa-whatsapp"></i>'. $instance['contact-whatsapp'] .'</div>';
         }
 	if( $instance['contact-viber'] ) {
-			echo '<div class="contact-viber">';
-                        echo '<div class="contact-info"><i class="fab fa-viber"></i>'. $instance['contact-viber'] .'</div>';
-			echo '</div></div>';
-        }               
+                        echo '<div class="contact-viber"><i class="fab fa-viber"></i>'. $instance['contact-viber'] .'</div>';
+        } 
+        if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
+            echo '</div>';
+        } 
         if( $instance['contact-text']||$instance['contact-address']||$instance['contact-phone']||$instance['contact-email']||$instance['contact-skype']||$instance['contact-whatsapp']||$instance['contact-viber'])  {
             echo '</div>';
         }
@@ -502,75 +462,32 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $publicicons = $this->icons;
         for ($i = 0; $i < count($publicicons); $i++) {
                $name='icon'.$publicicons[$i]['icon'];
-
-               echo (!empty($instance[$name]) ) ? '<a target="_blank" href="' . $instance[$name] . '">'.$publicicons[$i]['icon-i'] : '';
+               $hovercolor="'".$instance["icon-hover-color"]."'";
+               $color="'".$instance["icon-color"]."'";
+               
+               if ($instance['background']==='no') {
+                   $icon_color = $instance['icon-color'];
+                   $icon_bg_color='transparent';
+               } else {
+                   $icon_color = $instance['icon-color'];
+                   $icon_bg_color=$instance['icon-bg-color'];
+               }
+               
+               echo (!empty($instance[$name]) ) ? '<a target="_blank" href="' . $instance[$name] . '">'
+                       . '<i class="fab fa-'.$publicicons[$i]["icon-name"].'"  '
+                       . 'style="'
+                       . 'font-size:'.$instance["icon-font-size"]."px" . "; "
+                       . 'min-width:'.((int)$instance['icon-padding']*2+(int)$instance['icon-font-size']).'px; '
+                       . 'padding:'. $instance['icon-padding'].'px' . '; '
+                       . 'border-radius:'. $instance['icon-border-radius'].'px' . '; '
+                       . 'color:'.$icon_color . '; '                     
+                       . 'background:'.$icon_bg_color . '; '
+                       . '"'
+                       . ' onmouseover = "this.style.color='.$hovercolor.';" onmouseout = "this.style.color='.$color.';"></i>' : '';
         }
 
         echo '</div>';
-        echo '</div>';
-        echo $args['after_widget'];
-        
-        if (($instance['icon-font-size'])) {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {font-size:<?php echo $instance['icon-font-size'].'px' . '!important'; ?>; min-width: <?php echo ((int)$instance['icon-padding']*2+(int)$instance['icon-font-size']).'px'; ?>;}
-            </style>
-            <?php
-        }        
-        if (($instance['icon-padding'])) {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {padding:<?php echo $instance['icon-padding'].'px' . '!important'; ?>; }
-            </style>
-            <?php
-        }           
-        if (($instance['icon-border-radius'])) {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {border-radius:<?php echo $instance['icon-border-radius'].'px' . '!important'; ?>; }
-            </style>
-            <?php
-        }                  
-
-        if ($instance['background']==='no') {
-        if (($instance['icon-color'])) {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {color:<?php echo $instance['icon-color'] . '!important'; ?>; }
-            </style>
-            <?php
-        }
-        } else {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {color:#fff !important; }
-            </style>
-            <?php            
-        }
-        
-        if ($instance['background']==='yes') {
-        if (($instance['icon-bg-color'])) {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {background:<?php echo $instance['icon-bg-color'] . '!important'; ?>;}
-            </style>
-            <?php
-        }  
-        } else {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i {background:transparent !important'}
-            </style>
-            <?php            
-        }
-        
-        if (($instance['icon-hover-color'])) {
-            ?>
-            <style>
-                .wdv_about_me_widget_wdv_widget .wdv-icon-container a i:hover {color:<?php echo $instance['icon-hover-color'] . '!important'; ?>;}
-            </style>
-            <?php
-        }        
+        echo $args['after_widget'];           
     }
 
     //backend form
@@ -767,7 +684,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $value = 'yes';
 
         echo '<input value="' . $value . '" class="widefat" id="' . $this->get_field_id($value) . '" name="' . $this->get_field_name('background') . '" type="radio"' . ($rate == $value ? ' checked="checked"' : '') . ' />';
-        echo '<label for="' . $this->get_field_id($value) . '">' . __('Icon background color (Icon have white color)', 'wdv-about-me-widget') . '</label>';
+        echo '<label for="' . $this->get_field_id($value) . '">' . __('Icon background color', 'wdv-about-me-widget') . '</label>';
 
         echo '</p>';
         ?>       
@@ -803,11 +720,6 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             <label for="<?php echo esc_attr($this->get_field_id('icon-hover-color')); ?>"><?php _e("Icon hover color:", 'wdv-about-me-widget'); ?></label><br> 
             <input id="icon-hover-color-field" id="<?php echo esc_attr($this->get_field_id('icon-hover-color')); ?>" name="<?php echo esc_attr($this->get_field_name('icon-hover-color')); ?>" type="text" value="<?php echo esc_attr($instance['icon-hover-color']); ?>" />    
         </p> 
-
-                        <!--<p>
-                        <input class="checkbox" type="checkbox" <?php checked($instance['icon_new_tab'], 'on'); ?> id="<?php echo $this->get_field_id('icon_new_tab'); ?>" name="<?php echo $this->get_field_name('icon_new_tab'); ?>"/>
-                        <label for="<?php echo $this->get_field_id('icon_new_tab'); ?>"><?php _e('Open social links in new tab? ', 'wdv-about-me-widget'); ?></label>
-                        </p> -->  
         
         <!---------------------------->
         <!--Social links--> 
@@ -883,7 +795,6 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $new_instance['icon-color'] = strip_tags($new_instance['icon-color']);
         $new_instance['icon-bg-color'] = strip_tags($new_instance['icon-bg-color']);
         $new_instance['icon-hover-color'] = strip_tags($new_instance['icon-hover-color']);
-        //$new_instance['icon_new_tab']   = esc_textarea( $new_instance['icon_new_tab'] );
 
         $new_instance['iconBehance'] = strip_tags($new_instance['iconBehance']);
         $new_instance['iconBlogger'] = strip_tags($new_instance['iconBlogger']);

@@ -34,7 +34,7 @@
             _orig_send_attachment = wp.media.editor.send.attachment;
    
         $(document).on( 'click','.wdv-media-upload', function(e) {
-            console.log('insidejs=BBBBBBBBBBBBBBBBBBBBB');
+
             var button_id           = '#' + jQuery( this ).attr( 'id' ),
                 send_attachment_bkp = wp.media.editor.send.attachment,
                 button              = jQuery( button_id ),
@@ -64,8 +64,8 @@
         //Remove Image
             $(document).on( 'click', '.wdv-media-remove', function(e) {
 
-                var button              = jQuery( this ),
-                    id                  = button.attr( 'id' ).replace( '-remove', '' );
+                var button = jQuery( this ),
+                    id = button.attr( 'id' ).replace( '-remove', '' );
 
                 jQuery( '#' + id + '-preview' ).css( 'display', 'none' );
                 jQuery( '#' + id + '-noimg' ).css( 'display', 'block' );
@@ -73,37 +73,47 @@
                 jQuery( '#' + id ).val( '' ).trigger( 'change' );
 
             });    
-        
-        
-        
-        
-        
-    //Add icon
-    //    var faicon=array(
-    //         'facebook', 'twitter', 'instagram', 'pinterest-p'   
-    //        );
-        console.log('geturl=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
 
-
-    
+        //***********************************************************
+        //Add input for social icon  
         $(document).on('click','.btn', function(e){
-                       console.log( this.id);
-                       var buttonid              ='#icon-input-'+ this.id;
-                        $(buttonid).css("display", "block");
-        });        
-        
-        
- /*   $(document).on('click','.btn', function(){
-                       //geturl=$('#icon-input').val();
-                console.log('CCCCCCCCCCC');
-        });   */
-    
-    
-        
-    //    });
-    
-    
-    
+            console.log( 'BTN CLICK!!!!!!!!!!!!!!!'); 
+            console.log( this);
+            console.log( this.id);
+            var btnid=this.id;
+            var input              ='#icon-input-'+ this.id;
+            
+            var parent0=document.getElementById(btnid).parentNode.parentNode.parentNode.parentNode;
+            var parent00=document.getElementById(btnid).parentNode.parentNode.parentNode.parentNode.parentNode;
+            var parent1=document.getElementById(btnid).parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+            console.log( 'parentNode0', parent0); 
+            console.log( 'parentNode00', parent00); 
+            console.log( 'parentNode1', parent1);       
+            
+            var parent=this.parentNode.parentNode.parentNode.parentNode.parentNode;
+            console.log( 'parentNode', parent);   
+            
+            
+
+            var $div = $(parent);
+            //find all attributs for div
+            var attributs=$div.attr();  
+                    
+            console.log( 'ARRAY ATTR', attributs); 
+                        
+            var widgetId=attributs.id;
+            console.log( 'IDDD', widgetId); 
+            
+            var fullinput='#'+widgetId+' '+input;
+            console.log( 'FULLLLL IDDD', fullinput); 
+            $(fullinput).css("border", "2px solid red");
+                        $(fullinput).css("display", "block");
+        });            
+
+        //*********************************************************** 
+        //var widgetId=document.getElementById("demo");  
+        //$('[id^=customize-control-widget_wdv_about_me-]') 
+         //Add color
  	function initColorPicker( widget ) {
                 widget.find( '#icon-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
@@ -128,24 +138,32 @@
 
 	$( document ).on( 'widget-added widget-updated', onFormUpdate );
 
-	$( document ).ready( function() {
-                $( '.widget_wdv_about_me_widget #icon-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-                $( '.widget_wdv_about_me_widget #icon-bg-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-		$( '.widget_wdv_about_me_widget #icon-hover-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-	} );   
-    
-    
-    
-    
-    
+
     
     
 
 
 })( jQuery );
+
+
+
+
+           (function(old) {
+                $.fn.attr = function() {
+                  if(arguments.length === 0) {
+                    if(this.length === 0) {
+                      return null;
+                    }
+
+                    var obj = {};
+                    $.each(this[0].attributes, function() {
+                      if(this.specified) {
+                        obj[this.name] = this.value;
+                      }
+                    });
+                    return obj;
+                  }
+
+                  return old.apply(this, arguments);
+                };
+              })($.fn.attr);

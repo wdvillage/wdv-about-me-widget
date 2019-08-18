@@ -75,7 +75,7 @@ class Wdv_About_Me_Widget_Admin {
 
 		
                wp_enqueue_style( 'fontawesomeadmin', plugin_dir_url( __FILE__ ) . '../includes/fonts/css/all.min.css', array(), '5.9.0', 'all' );
-               wp_enqueue_style( 'fontawesomeadmin', plugin_dir_url( __FILE__ ) . '../includes/fonts/css/v4-shims.min.css', array(), '5.9.0', 'all' );               
+               wp_enqueue_style( 'fontawesomeadminv4', plugin_dir_url( __FILE__ ) . '../includes/fonts/css/v4-shims.min.css', array(), '5.9.0', 'all' );               
                wp_enqueue_style( 'admincss', plugin_dir_url( __FILE__ ) . 'css/wdv-about-me-widget-admin.css', array(), $this->version, 'all' ); 
                
                wp_enqueue_style( 'wp-color-picker' );          
