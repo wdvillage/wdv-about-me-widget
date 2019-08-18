@@ -77,42 +77,20 @@
         //***********************************************************
         //Add input for social icon  
         $(document).on('click','.btn', function(e){
-            console.log( 'BTN CLICK!!!!!!!!!!!!!!!'); 
-            console.log( this);
-            console.log( this.id);
             var btnid=this.id;
-            var input              ='#icon-input-'+ this.id;
+            var input              ='#icon-input-'+ this.id;      
             
-            var parent0=document.getElementById(btnid).parentNode.parentNode.parentNode.parentNode;
-            var parent00=document.getElementById(btnid).parentNode.parentNode.parentNode.parentNode.parentNode;
-            var parent1=document.getElementById(btnid).parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-            console.log( 'parentNode0', parent0); 
-            console.log( 'parentNode00', parent00); 
-            console.log( 'parentNode1', parent1);       
+            var parent=this.parentNode.parentNode.parentNode.parentNode.parentNode; 
             
-            var parent=this.parentNode.parentNode.parentNode.parentNode.parentNode;
-            console.log( 'parentNode', parent);   
-            
-            
-
             var $div = $(parent);
             //find all attributs for div
-            var attributs=$div.attr();  
-                    
-            console.log( 'ARRAY ATTR', attributs); 
-                        
-            var widgetId=attributs.id;
-            console.log( 'IDDD', widgetId); 
-            
+            var attributs=$div.attr();                         
+            var widgetId=attributs.id;          
             var fullinput='#'+widgetId+' '+input;
-            console.log( 'FULLLLL IDDD', fullinput); 
-            $(fullinput).css("border", "2px solid red");
-                        $(fullinput).css("display", "block");
+            $(fullinput).css("display", "block");
         });            
 
         //*********************************************************** 
-        //var widgetId=document.getElementById("demo");  
-        //$('[id^=customize-control-widget_wdv_about_me-]') 
          //Add color
  	function initColorPicker( widget ) {
                 widget.find( '#icon-color-field' ).wpColorPicker( {
