@@ -486,7 +486,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
                        . ' onmouseover = "this.style.color='.$hovercolor.';" onmouseout = "this.style.color='.$color.';"></i>' : '';
         }
 
-        echo '</div>';
+        echo '</a></div>';
         echo $args['after_widget'];           
     }
 
