@@ -404,9 +404,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
 
         echo (!empty($instance['link-address']) ) ? '</a>' : '';
 
-        if (!empty($instance['name'])){
-            echo '<div class="wdv-header">';
-        }
+        echo '<div class="wdv-header">';
         echo (!empty($instance['name']) ) ? '<p><div class="wdv-about-name" style="text-align:' . $instance['align'] . ';">' . $instance['name'] . '</div>' : '';
         echo (!empty($instance['profession']) ) ? '<div class="wdv-about-profession" style="text-align:' . $instance['align'] . ';">' . $instance['profession'] . '</div></p>' : '';
         echo (!empty($instance['description']) ) ? '<p><div class="about-description">' . $instance['description'] . '</div>' : '';
@@ -416,9 +414,8 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         } else {
             echo (!empty($instance['link-address']) ) ? '<a href="' . $instance['link-address'] . '" target="_self"><div class="about-link">' . $instance['link-text'] . '</div></a>' : '';
         }
-        if (!empty($instance['name'])){
-            echo '</p></div>';
-        }
+
+        echo '</p></div>';
         
         if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
             echo '<div class="contact-information">';
