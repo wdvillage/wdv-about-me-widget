@@ -27,12 +27,13 @@
 }
 .wdv_about_me_widget_wdv_widget .wdv-header a {
     text-align: right;
-}
-.wdv_about_me_widget_wdv_widget a,
-.wdv_about_me_widget_wdv_widget .wdv-header a .about-link {
     text-decoration: underline;
 }
-.wdv-header a {
+/*.wdv_about_me_widget_wdv_widget a,
+.wdv_about_me_widget_wdv_widget .wdv-header a {
+    text-decoration: underline;
+}*/
+.wdv-header a .about-link {
     margin-top: 10px;
 }
 .wdv-container .about-description {
