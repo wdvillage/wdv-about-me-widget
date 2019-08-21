@@ -1,7 +1,7 @@
 === WDV About Me Widget ===
 Contributors: vrpr
 Donate link: https://wdvillage.com/product/wdv-about-me-widget/
-Tags: about, contact, contacts, social, social icons, social networks, social media, social profiles, social links, about widget, widget, about me, image upload, contacts
+Tags: about, about me, widget, contact, social, social icons, contacts, social networks, social media, social profiles, social links, about widget, image upload, contacts
 Requires at least: 5.0.0
 Tested up to: 5.2.2
 Stable tag: trunk
