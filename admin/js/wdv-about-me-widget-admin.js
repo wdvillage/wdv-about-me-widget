@@ -29,6 +29,9 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+
+$(document).ready(function(){  
+    
     //Upload Image        
         var _custom_media = true,
             _orig_send_attachment = wp.media.editor.send.attachment;
@@ -119,7 +122,7 @@
 
     
     
-
+ });
 
 })( jQuery );
 
