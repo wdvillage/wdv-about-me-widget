@@ -96,6 +96,11 @@ $(document).ready(function(){
         //*********************************************************** 
          //Add color
  	function initColorPicker( widget ) {
+                widget.find( '#contact-icon-color-field' ).wpColorPicker( {
+				change: _.throttle( function() { // For Customizer
+						$(this).trigger( 'change' );
+				}, 3000 )
+		});            
                 widget.find( '#icon-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
 						$(this).trigger( 'change' );

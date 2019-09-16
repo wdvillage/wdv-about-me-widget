@@ -302,6 +302,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             'link-address' => '',
             'text_new_tab' => 'on',
             
+            'contact-icon-color'=> '#333',
             'contact-text'=> 'Contacts:',
             'contact-address'=> '',  
             'contact-phone'=> '', 
@@ -392,11 +393,11 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         }        
         
         if ($instance['text_new_tab'] === 'on') {
-            echo (!empty($instance['link-address']) ) ? '<a href="' . $instance['link-address'] . '" target="_blank">' : '';
+            echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_blank">' : '';
         } else {
-            echo (!empty($instance['link-address']) ) ? '<a href="' . $instance['link-address'] . '" target="_self">' : '';
+            echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_self">' : '';
         }
-        echo (!empty($instance['image']) ) ? '<div class="wdv-image" style="background-image:url(' . $instance['image'] . ');'
+        echo (!empty($instance['image']) ) ? '<div class="wdv-image" style="background-image:url(' . esc_url($instance['image']) . ');'
                 . 'width:' . $instance['img-width'] . 'px;'
                 . 'height: ' . $instance['img-height'] . 'px;'
                 . 'border-radius: ' . $instance['img-radius'] . 'px;'
@@ -405,14 +406,14 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         echo (!empty($instance['link-address']) ) ? '</a>' : '';
 
         echo '<div class="wdv-header">';
-        echo (!empty($instance['name']) ) ? '<p><div class="wdv-about-name" style="text-align:' . $instance['align'] . ';">' . $instance['name'] . '</div>' : '';
-        echo (!empty($instance['profession']) ) ? '<div class="wdv-about-profession" style="text-align:' . $instance['align'] . ';">' . $instance['profession'] . '</div></p>' : '';
-        echo (!empty($instance['description']) ) ? '<p><div class="about-description">' . $instance['description'] . '</div>' : '';
+        echo (!empty($instance['name']) ) ? '<p><div class="wdv-about-name" style="text-align:' . esc_html($instance['align']) . ';">' . esc_html($instance['name']) . '</div>' : '';
+        echo (!empty($instance['profession']) ) ? '<div class="wdv-about-profession" style="text-align:' . esc_html($instance['align']) . ';">' . esc_html($instance['profession']) . '</div></p>' : '';
+        echo (!empty($instance['description']) ) ? '<p><div class="about-description">' . esc_html($instance['description']) . '</div>' : '';
 
         if ($instance['text_new_tab'] === 'on') {
-            echo (!empty($instance['link-address']) ) ? '<a href="' . $instance['link-address'] . '" target="_blank"><div class="about-link">' . $instance['link-text'] . '</div></a>' : '';
+            echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_blank"><div class="about-link">' . esc_html($instance['link-text']) . '</div></a>' : '';
         } else {
-            echo (!empty($instance['link-address']) ) ? '<a href="' . $instance['link-address'] . '" target="_self"><div class="about-link">' . $instance['link-text'] . '</div></a>' : '';
+            echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_self"><div class="about-link">' . esc_html($instance['link-text']) . '</div></a>' : '';
         }
 
         echo '</p></div>';
@@ -420,8 +421,8 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
             echo '<div class="contact-information">';
                 if( $instance['contact-text'])  {
-			echo '<div class="contact-text" style="text-align:' . $instance['align'] . ';">';
-			echo $instance['contact-text'];                            
+			echo '<div class="contact-text" style="text-align:' . esc_html($instance['align']) . ';">';
+			echo esc_html($instance['contact-text']);                            
 			echo '</div>';
 		}              
         }
@@ -431,52 +432,59 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             echo '<div class="contact-container">';
         }            
         if( $instance['contact-address'])  {
-			echo '<div class="contact-address"><i class="fas fa-map-marker-alt"></i>' . $instance['contact-address'] . '</div>';                            
+			echo '<div class="contact-address"><i class="fas fa-map-marker-alt"></i>' . esc_html($instance['contact-address']) . '</div>';                            
 		}
 	if( $instance['contact-phone'] ) {
-                        echo '<div class="contact-phone"><i class="fas fa-phone-alt"></i>'. $instance['contact-phone'] .'</div>';
+                        echo '<div class="contact-phone"><i class="fas fa-phone-alt"></i>'. esc_html($instance['contact-phone']) .'</div>';
         }
 	if( $instance['contact-email'] ) {
-			echo '<div class="contact-email"><i class="far fa-envelope"></i>' . '<a href="mailto:' . $instance['contact-email'] . '">' . $instance['contact-email'] . '</a></div>';
+			echo '<div class="contact-email"><i class="far fa-envelope"></i>' . '<a href="mailto:' . esc_attr($instance['contact-email']) . '">' . esc_html($instance['contact-email']) . '</a></div>';
 		}        
         if( $instance['contact-skype'] ) {
-                        echo '<div class="contact-skype"><i class="fab fa-skype"></i>'. $instance['contact-skype'] .'</div>';
+                        echo '<div class="contact-skype"><i class="fab fa-skype"></i>'. esc_html($instance['contact-skype']) .'</div>';
         }
 	if( $instance['contact-whatsapp'] ) {
-                        echo '<div class="contact-whatsapp"><i class="fab fa-whatsapp"></i>'. $instance['contact-whatsapp'] .'</div>';
+                        echo '<div class="contact-whatsapp"><i class="fab fa-whatsapp"></i>'. esc_html($instance['contact-whatsapp']) .'</div>';
         }
 	if( $instance['contact-viber'] ) {
-                        echo '<div class="contact-viber"><i class="fab fa-viber"></i>'. $instance['contact-viber'] .'</div>';
+                        echo '<div class="contact-viber"><i class="fab fa-viber"></i>'. esc_html($instance['contact-viber']) .'</div>';
         } 
         if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
             echo '</div>';
         } 
         if( $instance['contact-text']||$instance['contact-address']||$instance['contact-phone']||$instance['contact-email']||$instance['contact-skype']||$instance['contact-whatsapp']||$instance['contact-viber'])  {
             echo '</div>';
-        }
-        
-        echo '<div class="wdv-icon-container">';
+        } ?>
+			<style>
+				.contact-address i,
+				.contact-phone i,
+				.contact-email i,
+                                .contact-skype i,
+				.contact-whatsapp i,
+                                .contact-viber i{ color:<?php echo esc_html($instance['contact-icon-color']); ?>; }
+			</style>        
+        <?php echo '<div class="wdv-icon-container">';
         $publicicons = $this->icons;
         for ($i = 0; $i < count($publicicons); $i++) {
                $name='icon'.$publicicons[$i]['icon'];
-               $hovercolor="'".$instance["icon-hover-color"]."'";
-               $color="'".$instance["icon-color"]."'";
+               $hovercolor="'".esc_html($instance["icon-hover-color"])."'";
+               $color="'".esc_html($instance["icon-color"])."'";
                
                if ($instance['background']==='no') {
-                   $icon_color = $instance['icon-color'];
+                   $icon_color = esc_html($instance['icon-color']);
                    $icon_bg_color='transparent';
                } else {
-                   $icon_color = $instance['icon-color'];
-                   $icon_bg_color=$instance['icon-bg-color'];
+                   $icon_color = esc_html($instance['icon-color']);
+                   $icon_bg_color=esc_html($instance['icon-bg-color']);
                }
                
-               echo (!empty($instance[$name]) ) ? '<a target="_blank" href="' . $instance[$name] . '">'
+               echo (!empty($instance[$name]) ) ? '<a target="_blank" href="' . esc_url($instance[$name]) . '">'
                        . '<i class="fab fa-'.$publicicons[$i]["icon-name"].'"  '
                        . 'style="'
-                       . 'font-size:'.$instance["icon-font-size"]."px" . "; "
+                       . 'font-size:'.esc_html($instance["icon-font-size"])."px" . "; "
                        . 'min-width:'.((int)$instance['icon-padding']*2+(int)$instance['icon-font-size']).'px; '
-                       . 'padding:'. $instance['icon-padding'].'px' . '; '
-                       . 'border-radius:'. $instance['icon-border-radius'].'px' . '; '
+                       . 'padding:'. esc_html($instance['icon-padding']).'px' . '; '
+                       . 'border-radius:'. esc_html($instance['icon-border-radius']).'px' . '; '
                        . 'color:'.$icon_color . '; '                     
                        . 'background:'.$icon_bg_color . '; '
                        . '"'
@@ -618,6 +626,22 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             <?php echo('CONTACT INFORMATIONS:'); ?>
         </label><br><br>      
         <div class="wdv-contact-info">
+            
+            
+            
+            
+        <!---------------------------->
+        <!--Contact icon's color--> 
+        <!---------------------------->
+        <p>
+            <label for="<?php echo esc_attr($this->get_field_id('contact-icon-color')); ?>"><?php _e('Contact icons color:', 'wdv-about-me-widget'); ?></label><br> 
+            <input id="contact-icon-color-field" id="<?php echo esc_attr($this->get_field_id('contact-icon-color')); ?>" name="<?php echo esc_attr($this->get_field_name('contact-icon-color')); ?>" type="text" value="<?php echo esc_attr($instance['contact-icon-color']); ?>" />    
+        </p>        
+            
+            
+            
+            
+            
         <div class="contact-input">
             <label for="<?php echo esc_attr($this->get_field_id('contact-text')); ?>"><?php esc_html_e("Contact's title", 'wdv-about-me-widget'); ?>:</label>
             <input class="widefat" type="text" id="<?php echo esc_attr($this->get_field_id('contact-text')); ?>" name="<?php echo esc_attr($this->get_field_name('contact-text')); ?>" value="<?php echo esc_attr($instance['contact-text']); ?>" />
@@ -784,6 +808,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $new_instance['link-address'] = strip_tags($new_instance['link-address']);
         $new_instance['text_new_tab'] = strip_tags($new_instance['text_new_tab']);
         
+        $new_instance['contact-icon-color'] = strip_tags($new_instance['contact-icon-color']); 
         $new_instance['contact-text'] = strip_tags($new_instance['contact-text']);        
         $new_instance['contact-address'] = strip_tags($new_instance['contact-address']);
         $new_instance['contact-phone'] = strip_tags($new_instance['contact-phone']);

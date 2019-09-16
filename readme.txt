@@ -41,7 +41,9 @@ With this plugin you can add 'WDV About Me Widget' widget to your theme. You can
 
 == Changelog ==
 = 1.0 =
+= 1.1.2 = 
 
 == Upgrade Notice ==
 = 1.0 =
+= 1.1.2 = add color for contact icons
 
