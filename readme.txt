@@ -99,9 +99,11 @@ For more information you can visit the home of the [WDV About Me Widget](http://
 = 1.0 =
 = 1.1.2 = 
 = 1.1.3 =
+= 1.1.4 =
 
 == Upgrade Notice ==
 = 1.0 =
 = 1.1.2 = add color for contact icons
 = 1.1.3 = change plugin description
+= 1.1.4 = changes in admin css and admin js
 

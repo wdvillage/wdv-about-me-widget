@@ -95,27 +95,29 @@ $(document).ready(function(){
 
         //*********************************************************** 
          //Add color
- 	function initColorPicker( widget ) {
+ 
+	function initColorPicker( widget ) {
                 widget.find( '#contact-icon-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
 						$(this).trigger( 'change' );
 				}, 3000 )
-		});            
+		});
                 widget.find( '#icon-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
 						$(this).trigger( 'change' );
 				}, 3000 )
 		});
-                widget.find( '#icon-bg-color-field' ).wpColorPicker( {
+		widget.find( '#icon-bg-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
 						$(this).trigger( 'change' );
 				}, 3000 )
 		});
-                widget.find( '#icon-hover-color-field' ).wpColorPicker( {
+		widget.find( '#icon-hover-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
 						$(this).trigger( 'change' );
 				}, 3000 )
-		});                
+		});
+         
 	}
 
 	function onFormUpdate( event, widget ) {
@@ -124,6 +126,22 @@ $(document).ready(function(){
 
 	$( document ).on( 'widget-added widget-updated', onFormUpdate );
 
+	$( document ).ready( function() {
+                $( '.widget_wdv_about_me_widget #contact-icon-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+                $( '.widget_wdv_about_me_widget #icon-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+		$( '.widget_wdv_about_me_widget #icon-bg-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+                $( '.widget_wdv_about_me_widget #icon-hover-color-field' ).each( function () {
+				initColorPicker( $( this ) );
+		} );
+   
+	} ); 
+ 
 
     
     

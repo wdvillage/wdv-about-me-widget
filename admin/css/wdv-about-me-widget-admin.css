@@ -20,6 +20,10 @@
     margin-bottom: 10px;
 }
 
+.wdv-media-inner img {
+    max-width:240px;
+}
+
 .wdv-media-url {
    width: 98%;
    margin: 1em 0; 
