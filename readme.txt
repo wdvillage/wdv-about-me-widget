@@ -81,29 +81,30 @@ For more information you can visit the home of the [WDV About Me Widget](http://
 == Frequently Asked Questions ==
 
 == Screenshots ==
-
-1. Add new "WDV About Me Widget" widget using "Widgets > Add a Widget".
-2. You can add an image and choose its size and border radius.
-3. You can add text (name, firm name, description) and choose text align.
-4. You can add link and you can add contact information.
-5. You can choose font size for social icons, border radius, colors.
-6. You can add social links.
-7. Example 1 of using "WDV About Me Widget".
-8. Example 2 of using "WDV About Me Widget".
-9. Example 3 of using "WDV About Me Widget".
-10. Example 4 of using "WDV About Me Widget".
-11. Example 5 of using "WDV About Me Widget".
-12. Example 6 of using "WDV About Me Widget".
+1. Add new "WDV About Me Widget" widget in Admin using "Appearance > Widgets".
+2. Add new "WDV About Me Widget" widget in Customizer using "Widgets > Add a Widget".
+3. You can add an image and choose its size and border radius.
+4. You can add text (name, firm name, description) and choose text align.
+5. You can add link and you can add contact information.
+6. You can choose font size for social icons, border radius, colors.
+7. You can add social links.
+8. Example 1 of using "WDV About Me Widget".
+9. Example 2 of using "WDV About Me Widget".
+10. Example 3 of using "WDV About Me Widget".
+11. Example 4 of using "WDV About Me Widget".
+12. Example 5 of using "WDV About Me Widget".
 
 == Changelog ==
 = 1.0 =
 = 1.1.2 = 
 = 1.1.3 =
 = 1.1.4 =
+= 1.1.5 =
 
 == Upgrade Notice ==
 = 1.0 =
 = 1.1.2 = add color for contact icons
 = 1.1.3 = change plugin description
 = 1.1.4 = changes in admin css and admin js
+= 1.1.5 = changes in admin js
 
