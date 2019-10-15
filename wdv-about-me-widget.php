@@ -11,7 +11,7 @@
  * Plugin Name:       WDV About Me Widget
  * Plugin URI:        http://wdvillage.com/product/wdv-about-me-widget/
  * Description:       Add 'WDV About Me Widget' widget to your theme.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Author:            wdvillage
  * Author URI:        http://wdvillage.com
  * License:           GPL-2.0+
@@ -27,9 +27,9 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.1.4 and use SemVer - https://semver.org
+ * Start at version 1.1.5 and use SemVer - https://semver.org
  */
-define( 'WDV_ABOUT_ME_WIDGET_VERSION', '1.1.4' );
+define( 'WDV_ABOUT_ME_WIDGET_VERSION', '1.1.5' );
 
 /**
  * The code that runs during plugin activation.

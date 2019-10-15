@@ -104,12 +104,10 @@ class Wdv_About_Me_Widget_Admin {
                         wp_enqueue_media();
                 }
                 wp_enqueue_script( 'wp-color-picker' );
-                wp_enqueue_script('underscore');
+                wp_enqueue_script('undescore', includes_url('js') . '/underscore.min.js' );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wdv-about-me-widget-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
-
-
     /*
     *Register widgets
     */

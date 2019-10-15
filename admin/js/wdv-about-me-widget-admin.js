@@ -1,3 +1,5 @@
+/* global _ */
+
 (function( $ ) {
 	'use strict';
 
@@ -100,6 +102,7 @@ $(document).ready(function(){
                 widget.find( '#contact-icon-color-field' ).wpColorPicker( {
 				change: _.throttle( function() { // For Customizer
 						$(this).trigger( 'change' );
+                                                console.log('#contact-icon-color-field');
 				}, 3000 )
 		});
                 widget.find( '#icon-color-field' ).wpColorPicker( {
@@ -126,21 +129,19 @@ $(document).ready(function(){
 
 	$( document ).on( 'widget-added widget-updated', onFormUpdate );
 
-	$( document ).ready( function() {
-                $( '.widget_wdv_about_me_widget #contact-icon-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-                $( '.widget_wdv_about_me_widget #icon-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-		$( '.widget_wdv_about_me_widget #icon-bg-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-                $( '.widget_wdv_about_me_widget #icon-hover-color-field' ).each( function () {
-				initColorPicker( $( this ) );
-		} );
-   
-	} ); 
+
+        $( '.widget_wdv_about_me_widget #contact-icon-color-field' ).each( function () {
+		initColorPicker( $( this ) );
+	} );
+        $( '.widget_wdv_about_me_widget #icon-color-field' ).each( function () {
+		initColorPicker( $( this ) );
+        } );
+        $( '.widget_wdv_about_me_widget #icon-bg-color-field' ).each( function () {
+		initColorPicker( $( this ) );
+	} );
+        $( '.widget_wdv_about_me_widget #icon-hover-color-field' ).each( function () {
+		initColorPicker( $( this ) );
+	} );
  
 
     
@@ -148,9 +149,6 @@ $(document).ready(function(){
  });
 
 })( jQuery );
-
-
-
 
            (function(old) {
                 $.fn.attr = function() {
