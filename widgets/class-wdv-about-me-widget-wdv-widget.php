@@ -300,6 +300,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             'align' => 'center',
             'link-text' => '',
             'link-address' => '',
+			'link-align' => 'right',
             'text_new_tab' => 'on',
             
             'contact-icon-color'=> '#333',
@@ -373,8 +374,8 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $instance = wp_parse_args((array) $instance, $this->defaults);
 
         echo $args['before_widget'];
-
-        echo '<div class="wdv-container">';
+		
+        echo '<!--begin class="wdv-container"--><div class="wdv-container">';
         if (!empty($instance['title']))
             echo $args['before_title'] . apply_filters('widget_title', $instance['title'], $instance, $this->id_base) . $args['after_title'];
 
@@ -392,6 +393,28 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             <?php
         }        
         
+
+        if ($instance['link-align'] === 'right') {
+            $linkalign = 'right;'; ?>
+            <style>
+                .wdv-header a .about-link {text-align: right;}
+            </style>
+        <?php               
+        } elseif ($instance['link-align'] === 'left') {
+            $linkalign = 'left;'; ?>
+            <style>
+                .wdv-header a .about-link {text-align: left;}
+            </style>            
+            <?php
+        } else{
+            $linkalign = 'center;'; ?>
+            <style>
+                .wdv-header a .about-link{text-align: center;}
+            </style>            
+            <?php
+        } 
+
+
         if ($instance['text_new_tab'] === 'on') {
             echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_blank">' : '';
         } else {
@@ -404,66 +427,58 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
                 . 'margin:0 auto;' . '"></div>' : '';
 
         echo (!empty($instance['link-address']) ) ? '</a>' : '';
-
-        echo '<div class="wdv-header">';
-        echo (!empty($instance['name']) ) ? '<p><div class="wdv-about-name" style="text-align:' . esc_html($instance['align']) . ';">' . esc_html($instance['name']) . '</div>' : '';
-        echo (!empty($instance['profession']) ) ? '<div class="wdv-about-profession" style="text-align:' . esc_html($instance['align']) . ';">' . esc_html($instance['profession']) . '</div></p>' : '';
-        echo (!empty($instance['description']) ) ? '<p><div class="about-description">' . esc_html($instance['description']) . '</div>' : '';
+		
+        echo '<!--begin class="wdv-header"--><div class="wdv-header">';
+        echo (!empty($instance['name']) ) ? '<div class="wdv-about-name" style="text-align:' . esc_html($instance['align']) . ';">' . esc_html($instance['name']) . '</div>' : '';
+        echo (!empty($instance['profession']) ) ? '<div class="wdv-about-profession" style="text-align:' . esc_html($instance['align']) . ';">' . esc_html($instance['profession']) . '</div>' : '';
+        echo (!empty($instance['description']) ) ? '<div class="about-description">' . esc_html($instance['description']) . '</div>' : '';
 
         if ($instance['text_new_tab'] === 'on') {
             echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_blank"><div class="about-link">' . esc_html($instance['link-text']) . '</div></a>' : '';
         } else {
             echo (!empty($instance['link-address']) ) ? '<a href="' . esc_url($instance['link-address']) . '" target="_self"><div class="about-link">' . esc_html($instance['link-text']) . '</div></a>' : '';
-        }
+        }			
+		echo '</div><!--end class="wdv-header"-->';
 
-        echo '</p></div>';
-        
         if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
-            echo '<div class="contact-information">';
+            echo '<!--begin class="contact-information"--><div class="contact-information">';
                 if( $instance['contact-text'])  {
 			echo '<div class="contact-text" style="text-align:' . esc_html($instance['align']) . ';">';
 			echo esc_html($instance['contact-text']);                            
 			echo '</div>';
 		}              
         }
-        
  
     if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
-            echo '<div class="contact-container">';
+            echo '<!--begin class="contact-container"--><div class="contact-container">';
         }            
         if( $instance['contact-address'])  {
-			echo '<div class="contact-address"><i class="fas fa-map-marker-alt"></i>' . esc_html($instance['contact-address']) . '</div>';                            
+			echo '<div class="contact-address"><i class="fas fa-map-marker-alt" style="color:' . esc_html($instance['contact-icon-color']) . ';"></i>' . esc_html($instance['contact-address']) . '</div>';                            
 		}
 	if( $instance['contact-phone'] ) {
-                        echo '<div class="contact-phone"><i class="fas fa-phone-alt"></i>'. esc_html($instance['contact-phone']) .'</div>';
+                        echo '<div class="contact-phone"><i class="fas fa-phone-alt" style="color:' . esc_html($instance['contact-icon-color']) . ';"></i>'. esc_html($instance['contact-phone']) .'</div>';
         }
 	if( $instance['contact-email'] ) {
-			echo '<div class="contact-email"><i class="far fa-envelope"></i>' . '<a href="mailto:' . esc_attr($instance['contact-email']) . '">' . esc_html($instance['contact-email']) . '</a></div>';
+			echo '<div class="contact-email"><i class="far fa-envelope" style="color:' . esc_html($instance['contact-icon-color']) . ';"></i>' . '<a href="mailto:' . esc_attr($instance['contact-email']) . '">' . esc_html($instance['contact-email']) . '</a></div>';
 		}        
         if( $instance['contact-skype'] ) {
-                        echo '<div class="contact-skype"><i class="fab fa-skype"></i>'. esc_html($instance['contact-skype']) .'</div>';
+                        echo '<div class="contact-skype"><i class="fab fa-skype" style="color:' . esc_html($instance['contact-icon-color']) . ';"></i>'. esc_html($instance['contact-skype']) .'</div>';
         }
 	if( $instance['contact-whatsapp'] ) {
-                        echo '<div class="contact-whatsapp"><i class="fab fa-whatsapp"></i>'. esc_html($instance['contact-whatsapp']) .'</div>';
+                        echo '<div class="contact-whatsapp"><i class="fab fa-whatsapp" style="color:' . esc_html($instance['contact-icon-color']) . ';"></i>'. esc_html($instance['contact-whatsapp']) .'</div>';
         }
 	if( $instance['contact-viber'] ) {
-                        echo '<div class="contact-viber"><i class="fab fa-viber"></i>'. esc_html($instance['contact-viber']) .'</div>';
+                        echo '<div class="contact-viber"><i class="fab fa-viber" style="color:' . esc_html($instance['contact-icon-color']) . ';"></i>'. esc_html($instance['contact-viber']) .'</div>';
         } 
         if( !empty($instance['contact-address'])||!empty($instance['contact-phone'])||!empty($instance['contact-email'])||!empty($instance['contact-skype'])||!empty($instance['contact-whatsapp'])||!empty($instance['contact-viber']))  {
             echo '</div>';
+        } 	
+		if( $instance['contact-address']||$instance['contact-phone']||$instance['contact-email']||$instance['contact-skype']||$instance['contact-whatsapp']||$instance['contact-viber'])  {
+            echo '</div><!--end class="contact-container"-->';
         } 
-        if( $instance['contact-text']||$instance['contact-address']||$instance['contact-phone']||$instance['contact-email']||$instance['contact-skype']||$instance['contact-whatsapp']||$instance['contact-viber'])  {
-            echo '</div>';
-        } ?>
-			<style>
-				.contact-address i,
-				.contact-phone i,
-				.contact-email i,
-                                .contact-skype i,
-				.contact-whatsapp i,
-                                .contact-viber i{ color:<?php echo esc_html($instance['contact-icon-color']); ?>; }
-			</style>        
-        <?php echo '<div class="wdv-icon-container">';
+        ?>
+		 	       
+        <?php echo '<!--begin class="wdv-icon-container" --><div class="wdv-icon-container">';
         $publicicons = $this->icons;
         for ($i = 0; $i < count($publicicons); $i++) {
                $name='icon'.$publicicons[$i]['icon'];
@@ -490,22 +505,31 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
                        . '"'
                        . ' onmouseover = "this.style.color='.$hovercolor.';" onmouseout = "this.style.color='.$color.';"></i>' : '';
         }
+        echo '</a></div><!--end class="wdv-icon-container"-->';
 
-        echo '</a></div>';
+		echo '</div><!--end class="wdv-container"-->';
+		
         echo $args['after_widget'];           
     }
-
     //backend form
     public function form($instance) {
         $instance = wp_parse_args((array) $instance, $this->defaults);
         ?>
+        <!---------------------------->
+        <!--Add btn "Buy PRO Version" -->
+        <!---------------------------->
+        <p>
+            <a href="https://wdvillage.com/product/wdv-about-me-widget-pro" target="_blank" class="button button-primary">
+                <?php _e('Get PRO Version', 'wdv-about-me-widget' ); ?> 
+            </a>
+        </p>
         <!---------------------------->
         <!--Add title -->
         <!---------------------------->
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title', 'wdv-about-me-widget'); ?>:</label>
             <input type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo esc_attr($instance['title']); ?>" class="widefat" />
-        </p>
+        </p><br>
         <!---------------------------->
         <!--Add Image -->  
         <!---------------------------->
@@ -536,12 +560,36 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
 
         </div> 
         
+        <p><br>       
+
+        <!---------------------------->
+        <!--Image size and border radius--> 
+        <!---------------------------->
         <p>
-            <!---------------------------->
+ 
+             <label for="<?php echo $this->get_field_id('text_area'); ?>">
+                <?php echo('IMAGE SETTINGS'); ?>
+            </label><br>
+
+            <label for="<?php echo esc_attr($this->get_field_id('img-width')); ?>"><?php esc_html_e('Image width (px)', 'wdv-about-me-widget'); ?>:</label>
+            <input class="widefat" type="number" min="20" max="500" step="5" id="<?php echo esc_attr($this->get_field_id('img-width')); ?>" name="<?php echo esc_attr($this->get_field_name('img-width')); ?>" value="<?php echo esc_attr($instance['img-width']); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo esc_attr($this->get_field_id('img-height')); ?>"><?php esc_html_e('Image height (px)', 'wdv-about-me-widget'); ?>:</label>
+            <input class="widefat" type="number" min="20" max="500" step="5" id="<?php echo esc_attr($this->get_field_id('img-height')); ?>" name="<?php echo esc_attr($this->get_field_name('img-height')); ?>" value="<?php echo esc_attr($instance['img-height']); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo esc_attr($this->get_field_id('img-radius')); ?>"><?php esc_html_e('Border radius for image (px)', 'wdv-about-me-widget'); ?>:</label>
+            <input class="widefat" type="number" min="0" max="500" step="1" id="<?php echo esc_attr($this->get_field_id('img-radius')); ?>" name="<?php echo esc_attr($this->get_field_name('img-radius')); ?>" value="<?php echo esc_attr($instance['img-radius']); ?>" />
+        </p><br>
+
+        <!---------------------------->
             <!--Image and text align--> 
             <!---------------------------->
             <label for="<?php echo $this->get_field_id('text_area'); ?>">
-                <?php echo('Text align'); ?>
+                <?php echo('TEXT ALIGH'); ?>
             </label><br>
             <?php
             $rate = isset($instance['align']) ? $instance['align'] : 'center';
@@ -562,25 +610,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
             echo '</p>';
             ?>    
 
-        </p>        
-
-        <!---------------------------->
-        <!--Image size and border radius--> 
-        <!---------------------------->
-        <p>
-            <label for="<?php echo esc_attr($this->get_field_id('img-width')); ?>"><?php esc_html_e('Image width (px)', 'wdv-about-me-widget'); ?>:</label>
-            <input class="widefat" type="number" min="20" max="500" step="5" id="<?php echo esc_attr($this->get_field_id('img-width')); ?>" name="<?php echo esc_attr($this->get_field_name('img-width')); ?>" value="<?php echo esc_attr($instance['img-width']); ?>" />
-        </p>
-
-        <p>
-            <label for="<?php echo esc_attr($this->get_field_id('img-height')); ?>"><?php esc_html_e('Image height (px)', 'wdv-about-me-widget'); ?>:</label>
-            <input class="widefat" type="number" min="20" max="500" step="5" id="<?php echo esc_attr($this->get_field_id('img-height')); ?>" name="<?php echo esc_attr($this->get_field_name('img-height')); ?>" value="<?php echo esc_attr($instance['img-height']); ?>" />
-        </p>
-
-        <p>
-            <label for="<?php echo esc_attr($this->get_field_id('img-radius')); ?>"><?php esc_html_e('Border radius for image (px)', 'wdv-about-me-widget'); ?>:</label>
-            <input class="widefat" type="number" min="0" max="500" step="1" id="<?php echo esc_attr($this->get_field_id('img-radius')); ?>" name="<?php echo esc_attr($this->get_field_name('img-radius')); ?>" value="<?php echo esc_attr($instance['img-radius']); ?>" />
-        </p>
+        </p><br> 
         <!---------------------------->
         <!--Info--> 
         <!---------------------------->
@@ -597,12 +627,12 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('description')); ?>"><?php esc_html_e(__('Description:', 'wdv-about-me-widget')); ?></label>
             <textarea class="widefat" rows="6" cols="20" id="<?php echo esc_attr($this->get_field_id('description')); ?>" name="<?php echo esc_attr($this->get_field_name('description')); ?>" type="text" ><?php echo esc_attr($instance['description']); ?></textarea>
-        </p>  
+        </p><br> 
         <!---------------------------->
         <!--Link--> 
         <!---------------------------->
         <label for="<?php echo $this->get_field_id('text_link'); ?>">
-            <?php echo('Text link:'); ?>
+            <?php echo('TEXT LINK:'); ?>
         </label><br> 
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('link-text')); ?>"><?php esc_html_e(__('Link text:', 'wdv-about-me-widget')); ?></label>
@@ -612,35 +642,65 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('link-address')); ?>"><?php esc_html_e(__('Link address:', 'wdv-about-me-widget')); ?></label>
             <input class="widefat" type="text" id="<?php echo esc_attr($this->get_field_id('link-address')); ?>" name="<?php echo esc_attr($this->get_field_name('link-address')); ?>" value="<?php echo esc_attr($instance['link-address']); ?>" />
-        </p>  
+        </p> 
+
+
+        <p>
+            <!---------------------------->
+            <!--Link align--> 
+            <!---------------------------->
+            <label for="<?php echo $this->get_field_id('text_area'); ?>">
+                <?php echo('Link align'); ?>
+            </label><br>
+            <?php
+            $rate = isset($instance['link-align']) ? $instance['link-align'] : 'right';
+
+            echo '<p>';
+            /* Default value */
+            $value = 'right';
+
+            echo '<input value="' . $value . '" class="widefat" id="' . $this->get_field_id($value) . '" name="' . $this->get_field_name('link-align') . '" type="radio"' . ($rate == $value ? ' checked="checked"' : '') . ' />';
+            echo '<label for="' . $this->get_field_id($value) . '">' . __('right', 'wdv-about-me-widget') . '</label>';
+            echo '<br/>';
+
+            $value = 'center';
+
+            echo '<input value="' . $value . '" class="widefat" id="' . $this->get_field_id($value) . '" name="' . $this->get_field_name('link-align') . '" type="radio"' . ($rate == $value ? ' checked="checked"' : '') . ' />';
+            echo '<label for="' . $this->get_field_id($value) . '">' . __('center', 'wdv-about-me-widget') . '</label>';
+            echo '<br/>';
+
+            $value = 'left';
+
+            echo '<input value="' . $value . '" class="widefat" id="' . $this->get_field_id($value) . '" name="' . $this->get_field_name('link-align') . '" type="radio"' . ($rate == $value ? ' checked="checked"' : '') . ' />';
+            echo '<label for="' . $this->get_field_id($value) . '">' . __('left', 'wdv-about-me-widget') . '</label>';
+            echo '<br/>';
+
+            echo '</p>';
+            ?>    
+
+        </p>        
 
         <p>
             <input class="checkbox" type="checkbox" <?php checked($instance['text_new_tab'], 'on'); ?> id="<?php echo $this->get_field_id('text_new_tab'); ?>" name="<?php echo $this->get_field_name('text_new_tab'); ?>"/>
             <label for="<?php echo $this->get_field_id('text_new_tab'); ?>"><?php _e('Open text links in new tab? ', 'wdv-about-me-widget'); ?></label>
-        </p>  
+        </p><br>  
         
         <!---------------------------->
         <!--Contact info--> 
         <!---------------------------->
         <label for="<?php echo $this->get_field_id('text_area'); ?>">
             <?php echo('CONTACT INFORMATIONS:'); ?>
-        </label><br><br>      
-        <div class="wdv-contact-info">
-            
-            
-            
+        </label><br>      
+        <div class="wdv-contact-info">            
             
         <!---------------------------->
         <!--Contact icon's color--> 
         <!---------------------------->
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('contact-icon-color')); ?>"><?php _e('Contact icons color:', 'wdv-about-me-widget'); ?></label><br> 
+            <label for="<?php echo esc_attr($this->get_field_id('contact-icon-color')); ?>"><?php _e('Contact icons color:', 'wdv-about-me-widget'); ?></label> 
             <input id="contact-icon-color-field" id="<?php echo esc_attr($this->get_field_id('contact-icon-color')); ?>" name="<?php echo esc_attr($this->get_field_name('contact-icon-color')); ?>" type="text" value="<?php echo esc_attr($instance['contact-icon-color']); ?>" />    
         </p>        
-            
-            
-            
-            
+                       
             
         <div class="contact-input">
             <label for="<?php echo esc_attr($this->get_field_id('contact-text')); ?>"><?php esc_html_e("Contact's title", 'wdv-about-me-widget'); ?>:</label>
@@ -692,7 +752,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         <!---------------------------->
         <label for="<?php echo $this->get_field_id('text_area'); ?>">
             <?php echo('SOCIAL ICONS:'); ?>
-        </label><br><br>       
+        </label><br>      
 
         <label for="<?php echo $this->get_field_id('text_area'); ?>">
             <?php echo('Icon style:'); ?>
@@ -746,13 +806,13 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('icon-hover-color')); ?>"><?php _e("Icon hover color:", 'wdv-about-me-widget'); ?></label><br> 
             <input id="icon-hover-color-field" id="<?php echo esc_attr($this->get_field_id('icon-hover-color')); ?>" name="<?php echo esc_attr($this->get_field_name('icon-hover-color')); ?>" type="text" value="<?php echo esc_attr($instance['icon-hover-color']); ?>" />    
-        </p> 
+        </p><br>
         
         <!---------------------------->
         <!--Social links--> 
         <!---------------------------->
         <label for="<?php echo $this->get_field_id('text_area'); ?>">
-            <?php echo('Add social links:'); ?>
+            <?php echo('ADD SOCIAL LINKS:'); ?>
         </label><br>         
         
         <?php
@@ -806,6 +866,7 @@ class Wdv_About_Me_Widget_Wdv_Widget extends WP_Widget {
         $new_instance['description'] = esc_textarea($new_instance['description']);
         $new_instance['link-text'] = strip_tags($new_instance['link-text']);
         $new_instance['link-address'] = strip_tags($new_instance['link-address']);
+        $new_instance['link-align'] = strip_tags($new_instance['link-align']);
         $new_instance['text_new_tab'] = strip_tags($new_instance['text_new_tab']);
         
         $new_instance['contact-icon-color'] = strip_tags($new_instance['contact-icon-color']); 

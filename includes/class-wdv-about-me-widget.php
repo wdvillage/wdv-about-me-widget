@@ -161,11 +161,10 @@ class Wdv_About_Me_Widget {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-  
 
-    //Widgets
-    $this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );   
-	}
+                //Widgets
+                $this->loader->add_action( 'widgets_init', $plugin_admin, 'register_widgets' );   
+                    }
 
 	/**
 	 * Register all of the hooks related to the public-facing functionality

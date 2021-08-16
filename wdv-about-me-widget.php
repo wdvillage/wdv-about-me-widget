@@ -3,6 +3,11 @@
 /**
  * The plugin bootstrap file
  *
+ * This file is read by WordPress to generate the plugin information in the plugin
+ * admin area. This file also includes all of the dependencies used by the plugin,
+ * registers the activation and deactivation functions, and defines a function
+ * that starts the plugin.
+ *
  * @link              http://wdvillage.com
  * @since             1.0.0
  * @package           Wdv_About_Me_Widget
@@ -10,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       WDV About Me Widget
  * Plugin URI:        http://wdvillage.com/product/wdv-about-me-widget/
- * Description:       Add 'WDV About Me Widget' widget to your theme.
- * Version:           1.1.5
+ * Description:       With this plugin you can add 'WDV About Me Widget' widget to your theme. You can add you data or your firm data. You can add image, description, link, contact information, social links.
+ * Version:           1.2.6
  * Author:            wdvillage
  * Author URI:        http://wdvillage.com
  * License:           GPL-2.0+
@@ -27,9 +32,10 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.1.5 and use SemVer - https://semver.org
+ * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WDV_ABOUT_ME_WIDGET_VERSION', '1.1.5' );
+define( 'WDV_ABOUT_ME_WIDGET_VERSION', '1.2.6' );
 
 /**
  * The code that runs during plugin activation.

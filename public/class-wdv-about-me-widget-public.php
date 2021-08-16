@@ -73,7 +73,7 @@ class Wdv_About_Me_Widget_Public {
 		 * class.
 		 */
 
-                wp_enqueue_style( 'fontawesomepublic', plugin_dir_url( __FILE__ ) . '../includes/fonts/css/all.min.css', array(),'5.9.0' , 'all' );
+            wp_enqueue_style( 'fontawesomepublic', plugin_dir_url( __FILE__ ) . '../includes/fonts/css/all.min.css', array(),'5.9.0' , 'all' );
                 wp_enqueue_style( 'fontawesomepublicv4', plugin_dir_url( __FILE__ ) . '../includes/fonts/css/v4-shims.min.css', array(), '5.9.0', 'all' );                               
                 wp_enqueue_style( 'publiccss', plugin_dir_url( __FILE__ ) . 'css/wdv-about-me-widget-public.css', array(), $this->version, 'all' );
 	}

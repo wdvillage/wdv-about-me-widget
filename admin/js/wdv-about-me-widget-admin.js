@@ -144,12 +144,6 @@ $(document).ready(function(){
 	} );
  
 
-    
-    
- });
-
-})( jQuery );
-
            (function(old) {
                 $.fn.attr = function() {
                   if(arguments.length === 0) {
@@ -168,4 +162,8 @@ $(document).ready(function(){
 
                   return old.apply(this, arguments);
                 };
-              })($.fn.attr);
+              })($.fn.attr);    
+    
+ });
+
+})( jQuery );

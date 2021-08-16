@@ -3,7 +3,7 @@
  * included in this file.
  */
 .wdv-container {
-    overflow: hidden;  
+    overflow: hidden;
 }
 .wdv-icon-container {
     text-align: center;
@@ -31,16 +31,23 @@
 }
 
 .wdv-header a .about-link {
-    margin-top: 10px;
+    margin-top: 1em;
 }
 .wdv-container .about-description {
     text-align: left;
+	margin-top:0.75em;
 }
 .wdv-about-name {
     font-weight: bold;
+    font-size: 110%;
+    margin-top:0.75em;
+    /*margin-bottom: 0.75em;*/
+	margin-bottom: 0;
 }
 .wdv-about-profession {
     font-style: italic;
+	/*margin-bottom:0.5em;*/
+	margin-top:0.75em;
 }
 .wdv-image {
   background-position: center center; /* Center the image */
@@ -71,24 +78,6 @@
     margin-top: 10px;
 }
 
-.contact-address:before {
-    content: "";
-}
-.contact-phone:before {
-    content: "";
-}
-.contact-email:before {
-    content: "";
-}
-.contact-skype:before {
-    content: "";
-}
-.contact-whatsapp:before {
-    content: "";
-}
-.contact-viber:before {
-    content: "";
-}
 .contact-container i {
    margin-right: 15px; 
 }

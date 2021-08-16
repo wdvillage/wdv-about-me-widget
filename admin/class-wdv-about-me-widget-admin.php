@@ -108,6 +108,8 @@ class Wdv_About_Me_Widget_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wdv-about-me-widget-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+
     /*
     *Register widgets
     */
@@ -125,4 +127,6 @@ class Wdv_About_Me_Widget_Admin {
         include_once( 'partials/wdv-about-me-widget-admin-display.php' );
         
     }  
+    
+ 
 }
