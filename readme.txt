@@ -3,7 +3,7 @@ Contributors: vrpr
 Donate link: https://wdvillage.com/product/wdv-about-me-widget/
 Tags: about, about me, about us, widget, contact, social, social icons, contacts, social networks, social media, social profiles, social links, about widget, image upload, contacts
 Requires at least: 5.0.0
-Tested up to: 5.8
+Tested up to: 6.2
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -14,8 +14,7 @@ With this plugin you can add 'WDV About Me Widget' widget to your theme. You can
 == Description ==
 
 With this plugin you can add [WDV About Me Widget](http://wdvillage.com/product/wdv-about-me-widget/) widget to your theme. You can add you data or your firm data.
-
-<strong>Get "WDV About Me Widget PRO" – <a href="https://wdvillage.com/product/wdv-about-me-widget-pro/">Click Here</a></strong>
+<br>You can find the pro version <strong>“WDV About Me Widget PRO”</strong> of plugin with more features here - <strong><a href="https://wdvillage.com/product/wdv-one-page-docs-pro/">Click Here</a></strong>
 
 You can use widget 'WDV About Me Widget' in different ways. For example:
 a) You can place this widget 'WDV About Me Widget' on left or right sidebar and add image, description, contact information and social links.
@@ -106,6 +105,7 @@ For more information you can visit the home of the [WDV About Me Widget](http://
 = 1.2.4 =
 = 1.2.5 =
 = 1.2.6 =
+= 1.2.7 =
 
 == Upgrade Notice ==
 = 1.0 =
@@ -123,3 +123,4 @@ For more information you can visit the home of the [WDV About Me Widget](http://
 = 1.2.4 = Remove trademarks 
 = 1.2.5 = Remove trademarks 
 = 1.2.6 = changes in widget 
+= 1.2.7 = new version WP 6.2 
